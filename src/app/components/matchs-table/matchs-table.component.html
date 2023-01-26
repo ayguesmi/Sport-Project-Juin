@@ -1,0 +1,29 @@
+<table class="table">
+  <tr style="color: white;">
+    <th>ID</th>
+    <th>Stadium</th>
+    <th>score one</th>
+    <th>score two</th>
+    <th>team one</th>
+    <th>team two</th>
+    <th>image one</th>
+    <th>image two</th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let m of matchs">
+    <th>#{{m.id}}</th>
+    <th>{{m.stadium}}</th>
+    <th>{{m.scoreOne}}</th>
+    <th>{{m.scoreTwo}}</th>
+    <th>{{m.teamOne}}</th>
+    <th>{{m.teamTwo}}</th>
+    <th>{{m.imageOne}}</th>
+    <th>{{m.imageTwo}}</th>
+    <th style="display:flex ;justify-content: space-around;">
+      <button class="btn btn-info" (click)="display(m.id)">Display</button>
+      <button class="btn btn-warning" (click)="edit(m.id)">Edit</button>
+      <button class="btn btn-danger" (click)="delete(m.id)">Delete</button>
+    </th>
+  </tr>
+</table>

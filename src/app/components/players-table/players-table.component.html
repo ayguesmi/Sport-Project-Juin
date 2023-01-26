@@ -1,0 +1,23 @@
+<table class="table">
+  <tr style="color: white;">
+    <th>ID</th>
+    <th>Name</th>
+    <th>nbr</th>
+    <th>age</th>
+    <th>position</th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let p of players">
+    <th>#{{p.id}}</th>
+    <th>{{p.name}}</th>
+    <th>{{p.nbr}}</th>
+    <th>{{p.age}}</th>
+    <th>{{p.position}}</th>
+    <th style="display:flex; justify-content: space-around;">
+      <button class="btn btn-info" (click)="display(p.id)">Display</button>
+      <button class="btn btn-warning" (click)="edit(p.id)">Edit</button>
+      <button class="btn btn-danger" (click)="delete(p.id)">Delete</button>
+    </th>
+  </tr>
+</table>

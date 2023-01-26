@@ -1,0 +1,20 @@
+<table class="table">
+  <tr style="color: white;">
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let u of users">
+    <th>#{{u.id}}</th>
+    <th>{{u.firstName}}</th>
+    <th>{{u.lastName}}</th>
+    <th>{{u.email}}</th>
+    <th style="display:flex; justify-content:space-around">
+      <button class="btn btn-info" (click)="displayUser(u.id)">Display</button>
+      <button class="btn btn-warning" (click)="editUser(u.id)">Edit</button>
+      <button class="btn btn-danger" (click)="delete(u.id)">Delete</button>
+    </th>
+  </tr>
+</table>
